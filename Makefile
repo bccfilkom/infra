@@ -9,3 +9,6 @@ tf/plan:
 
 tf/apply:
 	@cd terraform && terraform apply -var-file="proxmox.tfvars"
+
+tf/destroy:
+	@cd terraform && terraform destroy -var-file="proxmox.tfvars"

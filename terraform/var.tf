@@ -14,3 +14,14 @@ variable "api_token_id" {
   description = "Promox API Token ID"
 }
 
+variable "cloud_init_user" {
+  type        = string
+  description = "Cloud Init User"
+}
+
+
+variable "cloud_init_passwd" {
+  type      = string
+  sensitive = true
+}
+
