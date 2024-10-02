@@ -4,7 +4,8 @@ resource "proxmox_vm_qemu" "laplace" {
   target_node = "bcc-dev"
   clone       = "ubuntu24-cloud"
   count       = 4
-  agent       = 1
+  agent       = 0
+  full_clone  = true
 
   os_type = "cloud-init"
   cores   = 1
