@@ -2,6 +2,8 @@ variable "projects" {
   type = map(object({
     pubkey       = string
     host_segment = number
+    cores        = optional(number)
+    memory       = optional(number)
   }))
   default = {
     "career-path-ai" = {
@@ -15,6 +17,8 @@ variable "projects" {
     "mavis-summarizer" = {
       pubkey       = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO6qOQwZH6BEUIHVLrpjnBhwWHduqxUFeNkr5MOneD2B williamchen1506@gmail.com"
       host_segment = 4
+      cores        = 2
+      memory       = 4096
     }
     "whale-ai" = {
       pubkey       = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFgVDBg82J/Gm49NMq/Nz29FxUXs+Wln77BKluaUeHEj radityanalaa@gmail.com"
@@ -33,8 +37,8 @@ resource "proxmox_vm_qemu" "laplace" {
   full_clone  = true
 
   os_type = "cloud-init"
-  cores   = 1
-  memory  = 2048
+  cores   = each.value.cores != null ? each.value.cores : 1
+  memory  = each.value.memory != null ? each.value.memory : 2048
 
   scsihw   = "virtio-scsi-pci"
   bootdisk = "scsi0"
