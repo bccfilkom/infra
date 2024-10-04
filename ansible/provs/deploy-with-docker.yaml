@@ -1,4 +1,4 @@
-- name: deploy docker app
+- name: deploy app with docker
   hosts: all
   become: yes
   roles:
