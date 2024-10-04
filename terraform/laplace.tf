@@ -5,11 +5,11 @@ variable "projects" {
   }))
   default = {
     "career-path-ai" = {
-      pubkey       = ""
+      pubkey       = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCj6EoGomhmaGhAGRncamehO73AeuLi8F2JU5ZaKJ78WzroLDk0IEAbf28YfCuSHJmAquWOFxA/h3Ch2O11KRO4YjGLraDEUW9D/Qolaij3TiXYqOGReYk5BQfVc5OmWK35BJhRsX4+4yAHrzUxM/lli90kDrlo21RSaaCsYbL+OZ59tngGJQX+5bpXcsqqTLs7teooyEVWULf3n2h/Qszu04KzL+FqoZG0LaeZPMqNiwno5Kvj6oh5JTMmrGQRL8rV/sSXMPsCiYGTDAePqEVTHM0WjLDFMiMuv9x1+mDwCSYT6mLWeYJhY8WiPvrM2yNQMnvTyuWpkRU7ap2OB/jGZ8cKMWTPytcfI4eG/+tfptORzUgmjaUQQ3SBPQr1IF57Mevs6LTH5q/I/bb1oOlEp1ouRckQoYg9ubFTJQ2zZPcm+RxTfT8l9EaN25mvkSzjs16FJAfPkH0UsziD13aiDBT6ppd7gp1nUDGX3xwP8Nr2HDoXP2HafiWpS05csK8= msi@DESKTOP-57RMF98"
       host_segment = 2
     }
     "computy-ai" = {
-      pubkey       = ""
+      pubkey       = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtLiDm5xeL+wGxhxG1zsiwL0B0+iFFQfqi5MLjM3JTZsh0KjfJDNKaUcBv9wFE9Q4PT12LTUTCHisDsY52vMmAwMS7ETuRjzvyFrTUhpFFFRUq+YjvrstPpiuy7GJtdX81k2rndleEG8v8muWcBeBWrgVC/bwjKpdNiD8Xw2xTY6gH+mhb8n0eCbT3alsRbQk/wilfHQtUHqLSt3XxJ8jlfzMKSwJvqbtZV7LW6p8/0K90d+0ul1UeLsC6dspBeW0w2NPbvP9QocJx6kHoMeve+PeUdi2+ejDcgIqZOTaplUnIm7osJzbP2CbOS2UCvoDT1dVq6NSicfTRmbcGcogieWrEVMCci1By8UJHs4X9frhysKduYYx+b8ySGY/uTZN735HfWoPB5lEyKiBX9qUXMrp0fnKsvrQYDp0H1aoqE924eBxEwIyzOlZ4c3HgFaL1vvXzAz0k2fcfzieYyI+r1Jsv4TqEUhCu14FpbIOnU2SMnGnpfVwomYe/Vgu9Clc= syahr@Syahreza"
       host_segment = 3
     }
     "mavis-summarizer" = {
