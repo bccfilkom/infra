@@ -9,7 +9,7 @@ variable "projects" {
       host_segment = 2
     }
     "computy-ai" = {
-      pubkey       = ""
+      pubkey       = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtLiDm5xeL+wGxhxG1zsiwL0B0+iFFQfqi5MLjM3JTZsh0KjfJDNKaUcBv9wFE9Q4PT12LTUTCHisDsY52vMmAwMS7ETuRjzvyFrTUhpFFFRUq+YjvrstPpiuy7GJtdX81k2rndleEG8v8muWcBeBWrgVC/bwjKpdNiD8Xw2xTY6gH+mhb8n0eCbT3alsRbQk/wilfHQtUHqLSt3XxJ8jlfzMKSwJvqbtZV7LW6p8/0K90d+0ul1UeLsC6dspBeW0w2NPbvP9QocJx6kHoMeve+PeUdi2+ejDcgIqZOTaplUnIm7osJzbP2CbOS2UCvoDT1dVq6NSicfTRmbcGcogieWrEVMCci1By8UJHs4X9frhysKduYYx+b8ySGY/uTZN735HfWoPB5lEyKiBX9qUXMrp0fnKsvrQYDp0H1aoqE924eBxEwIyzOlZ4c3HgFaL1vvXzAz0k2fcfzieYyI+r1Jsv4TqEUhCu14FpbIOnU2SMnGnpfVwomYe/Vgu9Clc= syahr@Syahreza"
       host_segment = 3
     }
     "mavis-summarizer" = {
