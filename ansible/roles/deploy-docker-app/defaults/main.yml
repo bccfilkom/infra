@@ -1,0 +1,22 @@
+---
+# defaults file for deploy-docker-app
+
+# Docker-related variables
+dockerfile_path: "/path/to/Dockerfile"
+image_name: "my_app_image"
+image_tag: "latest"
+container_name: "my_app_container"
+host_port: 8080
+container_port: 80
+
+# Optional volumes (set to null if not needed)
+host_volume: null
+container_volume: null
+
+# Git repository variables for cloning
+github_username: "your_github_username"
+github_access_token: "your_github_access_token"
+github_repo: "your_github_repo" # Format: username(or orgs name)/repo_name
+home_path: "/home/user"
+app_name: "my_app"
+branch: "main"

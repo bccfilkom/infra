@@ -1,0 +1,73 @@
+---
+# tasks file for deploy-docker-app
+- name: Ensure required variables are set
+  ansible.builtin.assert:
+    that:
+      - github_username is defined
+      - github_access_token is defined
+      - github_repo is defined
+      - home_path is defined
+      - app_name is defined
+      - image_name is defined
+      - image_tag is defined
+      - container_name is defined
+      - host_port is defined
+      - container_port is defined
+    fail_msg: "One or more required variables are missing. Please ensure all variables are set."
+
+- name: Update apt package index
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - curl
+      - gnupg
+      - lsb-release
+      - python3-pip
+    state: present
+    update_cache: yes
+
+- name: Ensure Docker is installed
+  ansible.builtin.package:
+    name: docker
+    state: present
+
+- name: Ensure git is installed
+  ansible.builtin.package:
+    name: git
+    state: present
+
+- name: Clone repository from GitHub
+  ansible.builtin.git:
+    repo: "https://{{ github_username }}:{{ github_access_token }}@github.com/{{ github_repo }}.git"
+    dest: "{{ home_path }}/{{ app_name }}"
+    version: "{{ branch | default('master') }}"
+  when: github_username is defined and github_access_token is defined and github_repo is defined
+
+- name: Build Docker image
+  docker_image:
+    name: "{{ image_name }}:{{ image_tag }}"
+    source: build
+    build:
+      path: "{{ home_path }}/{{ app_name }}"
+      pull: true
+      nocache: false
+
+- name: Run Docker container without volumes
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}:{{ image_tag }}"
+    state: started
+    ports:
+      - "{{ host_port }}:{{ container_port }}"
+  when: host_volume is not defined or host_volume is none or container_volume is none
+
+- name: Run Docker container with volumes
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}:{{ image_tag }}"
+    state: started
+    ports:
+      - "{{ host_port }}:{{ container_port }}"
+    volumes:
+      - "{{ host_volume }}:{{ container_volume }}"
+  when: host_volume is defined and host_volume is not none and container_volume is defined and container_volume is not none

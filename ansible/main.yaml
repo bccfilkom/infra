@@ -1,0 +1,18 @@
+- name: deploy docker app
+  hosts: all
+  become: yes
+  roles:
+    - role: docker
+    - role: deploy-docker-app
+      vars:
+        github_username: ""
+        github_access_token: ""
+        github_repo: ""
+        home_path: "~"
+        app_name: "bcc-comprof"
+        branch: "master"
+        image_name: "bcc-comprof"
+        image_tag: "v1.0"
+        container_name: "bcc-comprof"
+        host_port: 80
+        container_port: 3000
