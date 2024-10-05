@@ -15,7 +15,10 @@ variable "projects" {
       host_segment = 3
     }
     "mavis-summarizer" = {
-      pubkey       = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO6qOQwZH6BEUIHVLrpjnBhwWHduqxUFeNkr5MOneD2B williamchen1506@gmail.com"
+      pubkey       = <<EOF
+        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKwMhuTljm/04G8OiCmqLX+oO3JVNS0mvm7uFdiHZZ6QjZ2huLbXZJJIJUS+Pxkzv4PDypUhhg3yP42Eh5sRsumLIznExJacxIvAc40XgSkJCgMSmITLPvwIBcmsDnTPNwMCeCchuzpjx4CuuUUvO+EZmSJCV0XvQpzoQkbz+nhvFtE9xhk/THkI2GP5DJ6doQ5kYtfNu/1IjJRZXQNPV2IIlbr8Q4gBonCj7e4XleykT9qn7Wxyqx+AIvlS1zqKT5q+dfmxICJkoUxAeOFchIvGfqDWqYGbY4RXd3TzPlgdztYno/00fLFBr+r0gr4IEe39mHT79v4Cb5xLV7WpANvUTefyE3P0bkmef7DN3WZHbAvqAqypO4TbNK4dYGrSUTwckA3QpH/hgF/Td1OidvVH4E3h796LBVAGK2KSBybyuI4Trgpyd6VcszO2LtWuT+CN3fhYPjR9qICLpBqO3X6FS32HoQ5V50kagxtr75vtshSNLYNIFWRu7tpyLBxp/P2Y4kDwT9hN9JFREclq3sXD1UOEjcRXKp5TC5AexZoD8kThnQIA86tmzQiPr2a+R9Yrd9sBh0DTYTHiUBec70Yf9DBf2YWq8BvB7Sl6X3Sq1Y6PKxnGUlv77FU/tSJUCDe5ZSwlhdcXmMWL2unv0caQZJbWRL1ODi+7XZAANN4Q== ryzen@DESKTOP-U3JP8OL
+        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO6qOQwZH6BEUIHVLrpjnBhwWHduqxUFeNkr5MOneD2B williamchen1506@gmail.com"
+      EOF
       host_segment = 4
       cores        = 2
       memory       = 4096
