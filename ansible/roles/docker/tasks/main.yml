@@ -43,3 +43,4 @@
     pip:
       name: docker
       executable: pip3
+      break_system_packages: true
