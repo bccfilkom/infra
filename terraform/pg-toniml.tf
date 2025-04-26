@@ -33,7 +33,7 @@ resource "proxmox_vm_qemu" "pg-toniml" {
     }
   }
 
-  ipconfig0  = "ip=192.168.1.3/24,gw=192.168.1.1"
+  ipconfig0  = "ip=192.168.10.3/24,gw=192.168.1.1"
   ciuser     = var.cloud_init_user
   cipassword = var.cloud_init_passwd
   sshkeys    = <<EOF
